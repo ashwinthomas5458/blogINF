@@ -1,0 +1,78 @@
+<div class="banner">
+    <div class="imageCarousel">
+        <div class="recentSmall cloneLast">
+            <div class="imageBox">
+                <img src="/blogImages/{{recent_2._id}}.jpg" alt="" class="images">
+            </div>
+            <div class="gradSmall">
+                <a href="/posts/{{recent_2._id}}" class="text">
+                    <h2>{{recent_2.title}}</h2>
+                    <p>{{recent_2.author}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="recent">
+            <div class="imageBox">
+                <img src="/blogImages/{{recent_0._id}}.jpg" alt="" class="images">
+            </div>
+            <div class="grad">
+                <a href="/posts/{{recent_0._id}}" class="text">
+                    <h2>{{recent_0.title}}</h2>
+                    <p>{{recent_0.author}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="recentSmall">
+            <div class="imageBox">
+                <img src="/blogImages/{{recent_1._id}}.jpg" alt="" class="images">
+            </div>
+            <div class="gradSmall">
+                <a href="/posts/{{recent_1._id}}" class="text">
+                    <h2>{{recent_1.title}}</h2>
+                    <p>{{recent_1.author}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="recentSmall">
+            <div class="imageBox">
+                <img src="/blogImages/{{recent_2._id}}.jpg" alt="" class="images">
+            </div>
+            <div class="gradSmall">
+                <a href="/posts/{{recent_2._id}}" class="text">
+                    <h2>{{recent_2.title}}</h2>
+                    <p>{{recent_2.author}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="recent cloneFirst">
+            <div class="imageBox">
+                <img src="/blogImages/{{recent_0._id}}.jpg" alt="" class="images">
+            </div>
+            <div class="grad">
+                <a href="/posts/{{recent_0._id}}" class="text">
+                    <h2>{{recent_0.title}}</h2>
+                    <p>{{recent_0.author}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="arrows">
+    <button class="prevButton"><img src="/svgs/left-arrow.svg" alt="<"></button>
+    <button class="nextButton"><img src="/svgs/right-arrow.svg" alt=">"></button>
+</div>
+<div class="blogContainer">
+    {{#each posts}}
+    <div class="blog">
+        <img src="/blogImages/{{this._id}}.jpg" alt="" class="images aln_l">
+        <div class="textbox">
+            <h2>{{this.title}}</h2>
+            <h6 class="grey">{{this.author}}, {{this.date}}</h6>
+            <p>
+               {{this.description}}
+            </p>
+            <a href="/posts/{{this._id}}" class="grey aln_r">Read full post</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

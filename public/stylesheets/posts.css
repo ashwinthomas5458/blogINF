@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #eeeeee;
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;   
+}
+.imagecontainer{
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.grey{
+    color: #666666;
+}
+.large{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+.textcontainer{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.textcontainer h1{
+    font-size: 3rem;
+}
+.textcontainer h5{
+    margin-bottom: 2rem;
+}
+.foot{
+    width: 100%;
+    height: auto;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 10rem;
+    height: 10rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.socialmedia{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+}
+.socialmedia .icon{
+    width: 2rem;
+    height: 2rem;
+}
+footer{
+    width: 100%;
+    color: #666666;
+    background-color: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+@media screen and (max-width:700px){
+    .banner{
+        height: 50vh;
+    }
+    .imagecontainer{
+        height: 30vh;
+    }
+    .textcontainer{
+        width: 90%;
+    }
+    .textcontainer h1{
+        font-size: 2rem;
+    }
+}

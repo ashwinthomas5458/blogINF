@@ -1,0 +1,9 @@
+<div class="head"></div>
+<form action="/home/edit/{{post._id}}" method="POST" class="createPost" enctype="multipart/form-data">
+    <h2>New Post</h2>
+    <input type="text" required name="title" placeholder="Title(maximum 40 characters)" value="{{post.title}}">
+    <input type="text" required class="content" name="content" placeholder="Post Content" value="{{post.content}}">
+    {{!-- <h4 class="grey aln_l">Upload a different Image</h4>
+    <input type="file" class="newPostBtn" placeholder="+" name="image"> --}}
+    <button class="btn aln_r" type="submit" name="submit">Edit Post</button>
+</form>

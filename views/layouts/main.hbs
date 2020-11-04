@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inches N Feet : Blog {{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" href="/stylesheets/header.css" type="text/css">
+</head>
+<body>
+  <div class="main">
+    <header class={{header.class}}>
+      {{#if header.admin}}
+      {{>adminHeader}}
+      {{else if header.user}}
+      {{>userHeader}}
+      {{/if}}
+    </header>
+    <div class="section">
+      {{{body}}}
+    </div>
+    {{#if header.user}}
+    <div class="foot">
+      <div class="socialmedia">
+        <a href="https://www.linkedin.com/company/inchesnfeet" target="_blank">
+          <img src="/svgs/linkedin.svg" alt="" class="icon">
+        </a>
+        <a href="https://instagram.com/inches.n.feet?igshid=1vtuchucz15e5" target="_blank">
+          <img src="/svgs/instagram.svg" alt="" class="icon">
+        </a>
+      </div>
+      <img src="/svgs/logoicon.svg" alt="" class="icon">
+      <h3>Inches N Feet</h3>
+    </div>
+    {{/if}}
+    {{>footer}}
+  </div> 
+  {{#if header.user}}
+  <script src="/javascripts/scroll.js"></script>
+  {{/if}} 
+  <script src="/javascripts/header.js"></script>
+</body>
+</html>

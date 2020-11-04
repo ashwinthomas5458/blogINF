@@ -1,0 +1,28 @@
+<div class="head"></div>
+<div class='container {{blogGrid}}'>
+    {{#if postsEmpty}}
+    <a href="/home/new" class="newPostBtn">
+        <h1>+</h1>
+        <h6>Create your first post</h6>
+    </a>
+    {{else}}
+
+    {{#each blogPosts}}
+    <div class="blog">
+        <div class="textbox">
+            <h2>{{this.title}}</h2>
+            <h6 class="grey">{{this.author}}, {{this.date}}</h6>
+            <p>
+                {{this.description}}
+            </p>
+            <a href="/posts/{{this._id}}" class="grey aln_r">Read full post</a>
+        </div>
+        <div class="row aln_r">
+            <a href="/home/edit/{{this._id}}" class="btn">Edit</a>
+            <a href="/home/delete/{{this._id}}" method="delete" class="btnreverse">Delete</a>
+        </div>
+    </div>
+    {{/each}}
+
+    {{/if}}
+</div>
